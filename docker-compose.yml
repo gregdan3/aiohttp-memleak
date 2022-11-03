@@ -1,11 +1,12 @@
 version: "3.8"
 services:
-  # py34:
-  #   build:
-  #     context: "."
-  #     dockerfile: "Dockerfile"
-  #     args:
-  #       VERSION: "3.4"
+  py34:
+    profiles: ["buggy"]
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+      args:
+        VERSION: "3.4"
   py35:
     build:
       context: "."
@@ -42,9 +43,10 @@ services:
       dockerfile: "Dockerfile"
       args:
         VERSION: "3.10"
-  # py311:
-  #   build:
-  #     context: "."
-  #     dockerfile: "Dockerfile"
-  #     args:
-  #       VERSION: "3.11"
+  py311:
+    profiles: ["buggy"]
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+      args:
+        VERSION: "3.11"
