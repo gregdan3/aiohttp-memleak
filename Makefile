@@ -1,9 +1,14 @@
 build:
 	docker compose build
-run:
-	docker compose run
+up:
+	docker compose up
+
+bbuild:
+	docker compose --profile buggy build
+bup:
+	docker compose --profile buggy up
 
 lbuild:
 	pdm sync
-lrun:
+lup:
 	pdm run ./aiohttp_example.py
